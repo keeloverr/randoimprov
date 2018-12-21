@@ -1,0 +1,236 @@
+html, body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+
+  color: #212121;
+  background-color: #fafafa;
+}
+
+a {
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+}
+
+.z-1 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.z-2 {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.z-3 {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.z-4 {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.z-5 {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  height: 64px;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.thin {
+  font-weight: lighter;
+}
+
+
+.toolbar, .toolbar-spacer {
+  display: block;
+  width: 100%;
+  height: 64px;
+}
+.toolbar {
+  position: fixed;
+  color: #fff;
+  background-color: #455A64;
+  z-index: 9;
+}
+
+.toolbar .container {
+  padding-left: 10px; padding-right: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.toolbar h1 {
+  display: inline-block;
+  margin-top: 15px; margin-bottom: 0px;
+}
+
+
+.thumbnail {
+  float: left;
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+}
+
+.thumbnail.expanded {
+  float: none;
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 90px;
+  max-height: calc(95vh - 64px);
+  background-color: #cfd8dc;
+  z-index: 8;
+}
+
+.thumbnail img {
+  cursor: pointer;
+}
+.thumbnail.expanded img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  max-height: calc(95vh - 64px - 36px);
+  height: auto;
+}
+
+.thumbnail-info {
+  display: block;
+  cursor: auto;
+  text-align: center;
+  padding: 0.5em 1em;
+}
+.thumbnail:not(.expanded) > .thumbnail-info {
+  display: none;
+}
+
+#view {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#disclaimer {
+  padding: 0 2em;
+}
+
+.button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  display: inline-block;
+  line-height: 36px;
+  padding: 0 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #eee;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ddd;
+}
+
+.button:active {
+  background-color: #bbb;
+}
+
+
+.spinner, .spinner i {
+  z-index: 10;
+}
+.spinner i {
+  display: block;
+  height: 5px;
+  width: 100%;
+  background-color: #cfd8dc;
+  -webkit-animation: 2s spinner infinite cubic-bezier(0.52, 0, 0.48, 1);
+  animation: 2s spinner infinite cubic-bezier(0.52, 0, 0.48, 1);
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    margin-left: -100%;
+    width: 100%;
+  }
+
+  50% {
+    margin-left: 0%;
+    width: 100%;
+  }
+
+  100% {
+    margin-left: 100%;
+    width: 0%;
+  }
+}
+
+@keyframes spinner {
+  0% {
+    margin-left: -100%;
+    width: 100%;
+  }
+
+  50% {
+    margin-left: 0%;
+    width: 100%;
+  }
+
+  100% {
+    margin-left: 100%;
+    width: 0%;
+  }
+}
+
+.clear-fix {
+  clear: both;
+}
+
+#scroll-spacer {
+  height: calc(100% - 64px);
+}
+
+.github-corner > svg {
+  z-index: 11;
+}
+
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out
+}
+
+@media (max-width:500px) {
+  .github-corner {
+    display: none;
+  }
+}
+
+@keyframes octocat-wave{
+  0%,100% {
+    transform:rotate(0);
+  }
+
+  20%, 60% {
+    transform:rotate(-25deg);
+  }
+  
+  40%, 80% {
+    transform: rotate(10deg);
+  }
+}
