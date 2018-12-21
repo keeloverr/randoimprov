@@ -185,3 +185,14 @@ app.run(function() {
       var prev = thumb.prev();
       var next = thumb.next();
     } else {
+var prev = [];
+      var next = $($(".thumbnail")[0]);
+    }
+
+    if (e.which == 37 && prev.length) {
+      prev.click();
+    } else if (e.which == 39 && next.length) {
+      next.click();
+    }
+  });
+});
